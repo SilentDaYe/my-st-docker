@@ -15,5 +15,5 @@ COPY config.yaml /app/config.yaml
 # 暴露 8000 端口
 EXPOSE 8000
 
-# 启动命令：强制监听 0.0.0.0 和 8000 端口，并关闭白名单
-CMD ["node", "server.js", "--listen", "--port", "8000", "--whitelistMode=false"]
+# 启动命令：强制绑定到 0.0.0.0 和系统的 PORT 环境变量
+CMD ["sh", "-c", "node server.js --listen --port ${PORT:-8000} --whitelistMode=false"]
