@@ -6,4 +6,3 @@ services:
     plan: free
     dockerfilePath: ./Dockerfile
     dockerContext: .
-    port: 8000
