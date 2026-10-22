@@ -1,0 +1,15 @@
+# 开启网络监听（允许 Render 外网访问）
+listen: true
+
+# 关闭白名单模式（避免 Render 二级域名访问报错）
+whitelistMode: false
+
+# 开启 BasicAuth 网页登录验证（强烈建议，防止别人盗用你的酒馆和 API 额度）
+basicAuthMode: true
+basicAuthUser: "xmantj"
+basicAuthPassword: "100713"
+
+# 其他默认优化配置
+port: 8000
+autorun: false
+skipContentCheck: true

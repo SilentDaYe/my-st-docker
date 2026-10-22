@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: my-sillytavern
+    env: docker
+    region: singapore
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    port: 8000
