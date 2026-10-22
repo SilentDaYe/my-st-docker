@@ -9,11 +9,11 @@ RUN git clone --depth=1 --branch release https://github.com/SillyTavern/SillyTav
 # 安装依赖
 RUN npm install
 
-# 复制我们在本地写好的 config.yaml 覆盖默认配置
+# 复制配置文件
 COPY config.yaml /app/config.yaml
 
 # 暴露 8000 端口
 EXPOSE 8000
 
-# 启动服务
-CMD ["npm", "run", "start:global"]
+# 启动服务（加上 --listen 允许全网卡监听，加上 --whitelistMode=false 关闭域名拦截）
+CMD ["node", "server.js", "--listen", "--whitelistMode=false"]
